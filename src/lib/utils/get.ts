@@ -1,4 +1,4 @@
-import type { DevApi } from './get.d.js';
+import type { DevApi } from './../../types/get.d.js';
 
 export const getArticles = async (): Promise<DevApi> => {
   try {
@@ -7,7 +7,8 @@ export const getArticles = async (): Promise<DevApi> => {
     const response: Response = await fetch(`${apiUrl}?page=1&per_page=10`, {
       method: 'GET',
       headers: {
-        'X-API-KEY': apiKey,
+        'API-KEY': apiKey,
+        'Accept': 'application/vnd.forem.api-v1+json',
         'Content-Type': 'application/json'
       },
       mode: 'cors',
@@ -19,6 +20,6 @@ export const getArticles = async (): Promise<DevApi> => {
     const result: DevApi = await response.json();
     return result;
   } catch (error) {
-    throw new Error(`Error: ${error.message}.`);
+    throw new Error(`Error: ${(error as Error).message}.`);
   }
 };
