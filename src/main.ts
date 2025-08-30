@@ -1,6 +1,5 @@
 import * as core from '@actions/core';
-import { getArticles } from './lib/utils/get.js';
-import { writeFeed } from './lib/utils/write.js';
+import { getArticles, writeFeed } from './utils.js';
 
 export const run = async (): Promise<void> => {
   try {
