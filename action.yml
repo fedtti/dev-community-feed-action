@@ -1,0 +1,9 @@
+name: 'DEV Community Feed'
+description: ''
+author: 'Federico Moretti <hello@federicomoretti.it> (https://federicomoretti.it)'
+
+
+
+runs:
+  using: node24
+  main: dist/index.js

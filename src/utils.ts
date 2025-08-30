@@ -1,3 +1,4 @@
+import * as core from '@actions/core';
 import { writeFile } from 'fs/promises';
 import type { ForemApi } from './utils.d.js';
 
@@ -27,14 +28,11 @@ export const getArticles = async (): Promise<ForemApi> => {
 
 export const writeFeed = async (articles: ForemApi): Promise<void> => {
   try {
-    const data = `
-      <?xml version="1.0" encoding="utf-8"?>
-      <feed xmlns="http://www.w3.org/2005/Atom">
-        <title>Federico Moretti AKA “fedtti”</title>
-        <link href=""/>
-      </feed>
-    `;
-    const feed = await writeFile('./dist/feed.xml', data);
+    for (let article in articles) {
+
+    }
+    const data = `<?xml version="1.0" encoding="utf-8"?>\n<feed xmlns="http://www.w3.org/2005/Atom">\n  <title>Federico Moretti AKA “fedtti”</title>\n  <link href=""/>\n</feed>`;
+    await writeFile('feed.xml', data); // TODO: @fedtti
   } catch (error) {
     throw new Error(`Error: ${(error as Error).message}.`);
   }

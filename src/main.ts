@@ -1,11 +1,16 @@
 import * as core from '@actions/core';
 import { getArticles, writeFeed } from './utils.js';
+import type { ForemApi } from './utils.d.js';
 
+/**
+ * The main function for the action.
+* @returns {void} - Resolves when the action is complete.
+ */
 export const run = async (): Promise<void> => {
   try {
-    const articles = await getArticles();
-    const feed: void = await writeFeed(articles);
+    const articles: ForemApi = await getArticles();
+    await writeFeed(articles);
   } catch (error) {
-    throw new Error(`Error: ${(error as Error).message}.`);
+    if (error instanceof Error) core.setFailed(error.message);
   }
 };

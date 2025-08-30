@@ -1,15 +1,19 @@
 {
   "name": "@fedtti/dev-community-feed-action",
   "version": "1.0.0",
-  "description": "DEV Community Feed Action",
-  "keywords": [],
+  "description": "DEV Community Feed",
+  "keywords": [
+    "actions"
+  ],
   "homepage": "https://github.com/fedtti/dev-community-feed-action#readme",
   "bugs": {
     "url": "https://github.com/fedtti/dev-community-feed-action/issues"
   },
   "license": "MIT",
   "author": "Federico Moretti <hello@federicomoretti.it> (https://federicomoretti.it)",
-  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fedtti/dev-community-feed-action.git"
