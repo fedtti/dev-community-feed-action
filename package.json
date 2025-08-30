@@ -2,25 +2,26 @@
   "name": "@fedtti/dev-community-feed-action",
   "version": "1.0.0",
   "description": "",
+  "keywords": [],
   "homepage": "https://github.com/fedtti/dev-community-feed-action#readme",
   "bugs": {
     "url": "https://github.com/fedtti/dev-community-feed-action/issues"
   },
+  "license": "MIT",
+  "author": "Federico Moretti <hello@federicomoretti.it> (https://federicomoretti.it)",
+  "main": "./dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fedtti/dev-community-feed-action.git"
   },
-  "license": "MIT",
-  "author": "",
-  "type": "module",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "private": true,
+  "scripts": {},
   "devDependencies": {
-    "@actions/core": "^1.11.1",
     "@types/node": "^24.3.0",
     "typescript": "^5.9.2"
-  }
+  },
+  "dependencies": {
+    "@actions/core": "^1.11.1"
+  },
+  "private": true,
+  "type": "module"
 }
