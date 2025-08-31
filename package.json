@@ -18,9 +18,13 @@
     "type": "git",
     "url": "git+https://github.com/fedtti/dev-community-feed-action.git"
   },
-  "scripts": {},
+  "scripts": {
+    "local-action": "npx @github/local-action . src/main.ts .env"
+  },
   "devDependencies": {
+    "@github/local-action": "^5.2.0",
     "@types/node": "^24.3.0",
+    "rolldown": "^1.0.0-beta.34",
     "typescript": "^5.9.2"
   },
   "dependencies": {

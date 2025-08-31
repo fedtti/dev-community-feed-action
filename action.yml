@@ -1,8 +1,16 @@
-name: 'DEV Community Feed'
-description: ''
-author: 'Federico Moretti <hello@federicomoretti.it> (https://federicomoretti.it)'
+name: DEV Community Feed
+description:
+author: Federico Moretti <hello@federicomoretti.it> (https://federicomoretti.it)
 
+branding:
+  icon:
+  color:
 
+input:
+  author:
+    description: 
+    required: true
+    default: 'Federico Moretti'
 
 runs:
   using: node24
