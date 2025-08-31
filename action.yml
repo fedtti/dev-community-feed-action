@@ -1,17 +1,25 @@
-name: DEV Community Feed
-description:
-author: Federico Moretti <hello@federicomoretti.it> (https://federicomoretti.it)
+name: 'DEV Community Feed'
+description: ''
+author: 'Federico Moretti <hello@federicomoretti.it> (https://federicomoretti.it)'
 
 branding:
-  icon:
-  color:
+  icon: 'rss'
+  color: 'black'
 
 input:
-  author:
-    description: 
+  author-name:
+    description: ''
     required: true
     default: 'Federico Moretti'
+  author-nickname:
+    description: ''
+    required: true
+    default: 'fedtti'
+  feed-link:
+    description: ''
+    required: true
+    default: 'https://federicomoretti.it'
 
 runs:
-  using: node24
-  main: dist/index.js
+  using: 'node24'
+  main: 'dist/index.js'

@@ -1,6 +1,6 @@
 import * as core from '@actions/core';
 import { getArticles, writeFeed } from './utils.js';
-import type { ForemApi } from './utils.d.js';
+import type { Article } from './utils.d.js';
 
 /**
  * The main function for the action.
@@ -8,7 +8,7 @@ import type { ForemApi } from './utils.d.js';
  */
 export const run = async (): Promise<void> => {
   try {
-    const articles: ForemApi = await getArticles();
+    const articles: Article[] = await getArticles();
     await writeFeed(articles);
   } catch (error) {
     if (error instanceof Error) core.setFailed(error.message);

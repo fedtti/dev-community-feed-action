@@ -9,7 +9,7 @@ type User = {
   profile_image_90: string;
 }
 
-export interface ForemApi {
+export interface Article {
   type_of: string;
   id: number;
   title: string;
