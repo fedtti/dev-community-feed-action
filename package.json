@@ -28,8 +28,7 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "@actions/core": "^1.11.1",
-    "uuid": "^13.0.0"
+    "@actions/core": "^1.11.1"
   },
   "private": true,
   "type": "module"
